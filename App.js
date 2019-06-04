@@ -6,28 +6,31 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, {Component} from "react"
+import {Platform, StyleSheet, Text, View} from "react-native"
+import {createStackNavigator, createAppContainer} from "react-navigation"
+import HomeScreen from "./screens/HomeScreen"
+import DetailScreen from "./screens/DetailScreen"
+import ExampleScreen from "./screens/ExampleScreen"
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
+const MainNavigator = createStackNavigator({
+  Home: {
+    screen: HomeScreen
+  },
+  Example: {
+    screen: ExampleScreen
+  },
+  Detail: {
+    screen: DetailScreen
   }
-}
+},
+{
+  defaultNavigationOptions: {
+    header: null
+  },
+})
+
+const App = createAppContainer(MainNavigator)
 
 const styles = StyleSheet.create({
   container: {
@@ -47,3 +50,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+export default App
