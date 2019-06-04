@@ -16,14 +16,14 @@ import {
 	Root
 } from "native-base"
 
-class DetailScreen extends Component {
+class AddScreen extends Component {
 	render(){
 		return(
 			<Root>
 				<Container>
 	        <Header style={{ backgroundColor: '#F88278' }} androidStatusBarColor="#F88278">
 	          <Body style={{ alignItems: "center", justifyContent: "center" }}>
-	          	<Text style={{ fontSize: 24, color: "#fff", fontWeight: "bold" }}>Belanjaan hari ini</Text>
+	          	<Text style={{ fontSize: 24, color: "#fff", fontWeight: "bold" }}>Buat catatan baru</Text>
 	          </Body>
 	          <Right>
 	          	<Button transparent>
@@ -46,4 +46,4 @@ class DetailScreen extends Component {
 	}
 }
 
-export default DetailScreen
+export default AddScreen

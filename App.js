@@ -11,14 +11,15 @@ import {Platform, StyleSheet, Text, View} from "react-native"
 import {createStackNavigator, createAppContainer} from "react-navigation"
 import HomeScreen from "./screens/HomeScreen"
 import DetailScreen from "./screens/DetailScreen"
+import AddScreen from "./screens/AddScreen"
 import ExampleScreen from "./screens/ExampleScreen"
 
 const MainNavigator = createStackNavigator({
   Home: {
     screen: HomeScreen
   },
-  Example: {
-    screen: ExampleScreen
+  Add: {
+    screen: AddScreen
   },
   Detail: {
     screen: DetailScreen
