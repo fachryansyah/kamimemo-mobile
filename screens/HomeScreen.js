@@ -72,7 +72,7 @@ class HomeScreen extends Component {
 				        	options: BUTTONS,
 				        	cancelButtonIndex: CANCEL_INDEX,
 				        	destructiveButtonIndex: DESTRUCTIVE_INDEX,
-				        	title: "TESTING"
+				        	title: "Apakah anda yakin ingin menghapus ?"
 				        },
 				        buttonIndex => {
 				        	if (typeof BUTTONS[buttonIndex] !== "undefined") {
