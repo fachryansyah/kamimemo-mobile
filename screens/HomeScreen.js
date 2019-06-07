@@ -37,16 +37,16 @@ var CANCEL_INDEX = 4;
 
 class HomeScreen extends Component {
 	constructor(props) {
-    super(props);
-    this.state = {
-    	button: ""
-    };
+	  super(props);
+	  this.state = {
+	    button: ""
+	  };
   }
 	render(){
 		const {navigate} = this.props.navigation
 		return(
 			<Root>
-				<Drawer ref={(ref) => {this.drawer = ref}} content={<SideBar />}>
+				<Drawer ref={(ref) => {this.drawer = ref}} content={<SideBar nav={navigate} />}>
 					<Container>
 		        <Header style={{ backgroundColor: '#F88278' }} androidStatusBarColor="#F88278">
 		        	<Left>

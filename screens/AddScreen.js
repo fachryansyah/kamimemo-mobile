@@ -40,7 +40,7 @@ class AddScreen extends Component {
 	            <Textarea bordered placeholder="Textarea" style={{ height: Dimensions.get("window").height - 110 }} />
 	          </Form>
 	        </Content>
-	      </Container>
+			  </Container>
 			</Root>
 		)
 	}

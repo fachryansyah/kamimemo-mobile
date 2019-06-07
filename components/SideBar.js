@@ -3,6 +3,9 @@ import {View} from "react-native"
 import { Container, Button, Content, Text, Icon, Thumbnail, Grid, Col, Header, Body } from 'native-base'
 
 class SideBar extends Component {
+  constructor(props) {
+    super(props);
+  }
 	render(){
 		return(
 			<Container>
@@ -22,7 +25,7 @@ class SideBar extends Component {
           			<Text style={{ fontSize: 12, color: "#888A85" }}>jhondoe1337@gmail.com</Text>
           		</Col>
           	</Grid>
-          	<Button bordered danger full rounded style={{ marginTop: 18 }}>
+          	<Button bordered danger full rounded style={{ marginTop: 18 }} onPress={() => this.props.nav("Login")}>
 	            <Text>LOGOUT</Text>
 	          </Button>
           </View>
